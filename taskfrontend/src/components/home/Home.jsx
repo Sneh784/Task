@@ -1,14 +1,19 @@
 import React from 'react'
 
-function HomePage() {
+function Home() {
   return (
-    <div>
-      
+    <div className="min-h-screen flex items-center justify-center bg-slate-100">
+      <div className="bg-white shadow-lg rounded-xl p-10">
+        <h1 className="text-4xl font-bold text-green-600">
+          Login Successful 🎉
+        </h1>
 
-      Welcome To HomePage
-      
+        <p className="mt-3 text-slate-600">
+          Welcome to the Home Page
+        </p>
+      </div>
     </div>
-  )
+  );
 }
 
-export default HomePage
+export default Home;

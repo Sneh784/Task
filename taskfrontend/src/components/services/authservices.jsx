@@ -1,11 +1,22 @@
-import React from 'react'
+import axios from "axios";
+import { loginUser } from "../services/authService";
 
-function authservices() {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+const API_URL = "http://localhost:5000/api";
 
-export default authservices
+export const loginUser = async (userData) => {
+  const response = await axios.post(
+    `${API_URL}/login`,
+    userData
+  );
+
+  return response.data;
+};
+
+export const registerUser = async (userData) => {
+  const response = await axios.post(
+    `${API_URL}/register`,
+    userData
+  );
+
+  return response.data;
+};
